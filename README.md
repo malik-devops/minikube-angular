@@ -134,3 +134,4 @@ To verify the latest version of your application run the following command:
 
 ```minikube service angular-app --url -n project```
 # minikube-angular
+# minikube-angular
