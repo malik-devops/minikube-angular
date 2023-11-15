@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-11-15T23:30:48Z"
+  labels:
+    app: angular-app
+  name: angular-app
+  namespace: project
+  resourceVersion: "263755"
+  uid: 05a6948f-9fe3-43e2-9826-f5c159edc6b1
+spec:
+  clusterIP: 10.111.78.188
+  clusterIPs:
+  - 10.111.78.188
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30358
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: angular-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
